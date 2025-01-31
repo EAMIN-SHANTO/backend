@@ -45,6 +45,7 @@ const corsOptions = {
 app.use(corsMiddleware);
 
 // Use CORS middleware with the defined options
+
 app.use(cors(corsOptions));
 
 app.use('/photos', express.static('photos'));
