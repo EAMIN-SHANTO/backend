@@ -26,7 +26,7 @@ export const verifyToken = (req, res, next) => {
 // Add this CORS middleware to your Express app
 export const corsMiddleware = (req, res, next) => {
   res.header('Access-Control-Allow-Credentials', 'true');
-  res.header('Access-Control-Allow-Origin', 'http://localhost:5173'); // Your frontend URL
+  res.header('Access-Control-Allow-Origin', 'http://localhost:5173',"https://buui-sage.vercel.app",req.headers.origin ); // Your frontend URL
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,UPDATE,OPTIONS');
   res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
   next();
