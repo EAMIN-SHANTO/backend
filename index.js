@@ -39,7 +39,7 @@ const app = express();
 app.use(express.json());
 // CORS options for frontend
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://buui-sage.vercel.app"], // Set this to your frontend's URL
+  origin: ["http://localhost:5173", "https://buui-sage.vercel.app","https://brac-uverse.vercel.app"], // Set this to your frontend's URL
   credentials: true, // Allow cookies and credentials
 };
 app.use(corsMiddleware);
