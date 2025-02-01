@@ -41,6 +41,8 @@ app.use(express.json());
 const corsOptions = {
   origin: ["http://localhost:5173", "https://buui-sage.vercel.app","https://brac-uverse.vercel.app"], // Set this to your frontend's URL
   credentials: true, // Allow cookies and credentials
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 };
 app.use(corsMiddleware);
 
@@ -49,6 +51,7 @@ app.use(corsMiddleware);
 app.use(cors(corsOptions));
 
 app.use('/photos', express.static('photos'));
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 app.use(cookieParser());
 app.use((req, res, next) => {
